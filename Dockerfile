@@ -6,8 +6,6 @@ COPY . .
 
 WORKDIR /app/worker/
 
-RUN go build main.go
+RUN go build -o ./worker
 
-EXPOSE 7233
-
-CMD ["./main"]
+CMD ["./worker"]
